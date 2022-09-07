@@ -1,0 +1,9 @@
+<!DOCTYPE SaveWorkspaceState>
+<SaveWorkspaceState>
+    <Windows>
+        <Schematic view="schematic" x1="-8" height="705" cell="cell_1" lib="HA_LNA_lib" width="1366" y1="-8"/>
+        <Schematic view="schematic" x1="-8" height="705" cell="cell_2" lib="HA_LNA_lib" width="1366" y1="-8"/>
+        <DDS name="cell_1.dds"/>
+    </Windows>
+    <MainWindowTab tab="1"/>
+</SaveWorkspaceState>

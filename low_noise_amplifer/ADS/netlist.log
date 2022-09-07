@@ -1,0 +1,46 @@
+
+Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="HA_LNA_lib:cell_1:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
+S_Param:SP1 CalcS=yes CalcY=no CalcZ=no GroupDelayAperture=1e-4 FreqConversion=no FreqConversionPort=1 StatusLevel=2 CalcNoise=no SortNoise=0 BandwidthForNoise=1.0 Hz DevOpPtLevel=0 \
+SweepVar="freq" SweepPlan="SP1_stim" OutputPlan="SP1_Output" 
+
+SweepPlan: SP1_stim Start=1.8 GHz Stop=1.8 GHz Step=1.0 GHz 
+
+OutputPlan:SP1_Output \
+      Type="Output" \
+      UseEquationNestLevel=yes \
+      EquationNestLevel=2 \
+      UseSavedEquationNestLevel=yes \
+      SavedEquationNestLevel=2
+
+#load "python","LinearCollapse"
+Component Module="LinearCollapse" Type="ModelExtractor" NetworkRepresentation=2
+S_Port:S2P1  N__4 0 N__6 0 S[1,1]=S11 S[1,2]=S12 S[2,1]=S21 S[2,2]=S22 Recip=no 
+aele L_StabCircle1=l_stab_circle(S,5000);
+aele S_StabCircle1=s_stab_circle(S,5000);
+Port:Term1  N__4 0 Num=1 Z=50 Ohm Noise=yes 
+Port:Term2  N__6 0 Num=2 Z=50 Ohm Noise=yes 
+
+S11=polar(0.93,-60.1)
+Sopt=polar(0.78,58)
+Fmin=dbwtow(0.7)
+NF_req=0.9
+Z0=50
+Rn=22
+NFmin=0.7
+S12=polar(0.028,57.7)
+S21=polar(1.61,128.7)
+S22=polar(0.43,-172.3)
+aele F1=Fmin+(1.76*(abs(Ts-Sopt)**2)/((1-(abs(Ts)**2))*(abs(1+Sopt)**2)));F=10*log(F1);
+aele NsCircle1=ns_circle(NF_req,NFmin,Sopt,Rn/50,1e2);
+aele SmGammaS=sm_gamma1(S);
+aele SmGammaL=sm_gamma2(S);
+aele PwrGain1=pwr_gain(S,Zs,Zl);
+aele Zs=Z0*(1+Ts)/(1-Ts);Zl=Z0*(1+Tl)/(1-Tl);delta=S11*S22-S12*S21;
+aele K=stab_fact(S);
+aele Tin=S11+(S12*S21*Tl)/(1-S22*Tl);Ts=polar(Ts_mag,Ts_phase);Tl=polar(Tl_mag,Tl_phase);Tout=S22+(S12*S21*Tl)/(1-S11*Ts);
+
+Ts_mag=0.897 tune{ 0.4485 to 1.3455 by 0.0897 }
+Ts_phase=59.26
+
+Tl_mag=0.3
+Tl_phase=148
