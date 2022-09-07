@@ -1,0 +1,24 @@
+
+Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="Pavel_Marco_lib:cell_1:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
+Port:Term1  N__12 0 Num=1 Z=50 Ohm Noise=yes 
+Port:Term2  N__14 0 Num=2 Z=50 Ohm Noise=yes 
+Port:Term3  N__15 0 Num=3 Z=50 Ohm Noise=yes 
+Port:Term4  N__13 0 Num=4 Z=50 Ohm Noise=yes 
+TLIN:TL1  N__12 N__14 Z=36.285 Ohm E=90 F=4 GHz tune{ 2 GHz to 6 GHz by 0.4 GHz } 
+TLIN:TL2  N__13 N__15 Z=36.285 Ohm E=90 F=4 GHz tune{ 2 GHz to 6 GHz by 0.4 GHz } 
+TLIN:TL3  N__12 N__13 Z=52.98 Ohm E=90 F=4 GHz tune{ 2 GHz to 6 GHz by 0.4 GHz } 
+TLIN:TL4  N__14 N__15 Z=52.98 Ohm E=90 F=4 GHz tune{ 2 GHz to 6 GHz by 0.4 GHz } 
+S_Param:SP1 CalcS=yes CalcY=no CalcZ=no GroupDelayAperture=1e-4 FreqConversion=no FreqConversionPort=1 StatusLevel=2 CalcNoise=no SortNoise=0 BandwidthForNoise=1.0 Hz DevOpPtLevel=0 \
+SweepVar="freq" SweepPlan="SP1_stim" OutputPlan="SP1_Output" 
+
+SweepPlan: SP1_stim Start=0.0 GHz Stop=30.0 GHz Step=0.10 GHz 
+
+OutputPlan:SP1_Output \
+      Type="Output" \
+      UseEquationNestLevel=yes \
+      EquationNestLevel=2 \
+      UseSavedEquationNestLevel=yes \
+      SavedEquationNestLevel=2
+
+#load "python","LinearCollapse"
+Component Module="LinearCollapse" Type="ModelExtractor" NetworkRepresentation=2
