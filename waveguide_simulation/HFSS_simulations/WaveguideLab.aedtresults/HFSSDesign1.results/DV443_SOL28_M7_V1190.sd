@@ -1,0 +1,123 @@
+$begin 'soln'
+	ObjectType='HfssModal'
+	SolutionType='Adaptive'
+	MajorVersion=2
+	MinorVersion=0
+	Producer=''
+	Name='Adaptive_7'
+	AdaptivePass=7
+	EnergyError=109638.0978611548
+	$begin 'Frequencies'
+		$begin 'DataPoint'
+			Frequency=3000000000
+			DataType='None'
+			$begin 'SMatrix'
+				m=4
+				n=4
+				$begin 'r0'
+					c(-1.049866011404443e-005, -1.462295090441703e-009)
+					c(-9.610068974683659e-007, -1.530929461091437e-009)
+					c(0.009066186545504472, -8.185796464591439e-006)
+					c(4.750465163621084e-009, -5.07144850351245e-012)
+				$end 'r0'
+				$begin 'r1'
+					c(-9.610068979514862e-007, -1.530929108457056e-009)
+					c(-0.0002330293402523775, -7.500521378416833e-009)
+					c(-3.510235571202148e-008, 2.661221544252556e-011)
+					c(5.611849373039989e-007, -3.834709556407521e-010)
+				$end 'r1'
+				$begin 'r2'
+					c(0.009066186545504456, -8.185796464592326e-006)
+					c(-3.510235570825295e-008, 2.661221300964849e-011)
+					c(-8.082000693132585e-006, -4.086843756830767e-010)
+					c(3.542985268353102e-007, 5.18807257898751e-010)
+				$end 'r2'
+				$begin 'r3'
+					c(4.750465158012716e-009, -5.07145067266814e-012)
+					c(5.611849373039974e-007, -3.834709556408817e-010)
+					c(3.542985262119245e-007, 5.188071259358271e-010)
+					c(-0.0001960344314839713, 3.473730440006909e-010)
+				$end 'r3'
+			$end 'SMatrix'
+			$begin 'Gamma'
+				n=4
+				$begin 'r0'
+					c(47.03168069617351, 0.009028837579302644)
+					c(143.9323932583063, 0.006825933275565476)
+					c(47.03171721034664, 0.009028844299950109)
+					c(143.9327341044331, 0.006826333794921045)
+				$end 'r0'
+			$end 'Gamma'
+			$begin 'Zpi'
+				n=4
+				$begin 'r0'
+					c(0.04265159564505583, 155.3322782626761)
+					c(0.006626918551089744, 50.80247149825803)
+					c(0.0426500719804785, 155.3307140070444)
+					c(0.006616411182579225, 50.7110682014431)
+				$end 'r0'
+			$end 'Zpi'
+			$begin 'Zpv'
+				n=4
+				$begin 'r0'
+					c(0.07113547721571932, 251.8431016059701)
+					c(-7.986682653100877e-010, 3.10075572578512e-007)
+					c(0.07113562632063974, 251.8435147075354)
+					c(8.363437649220713e-013, 3.291189077983866e-007)
+				$end 'r0'
+			$end 'Zpv'
+			$begin 'Zwave'
+				n=4
+				$begin 'r0'
+					c(0.1574659672418442, 503.7012554091653)
+					c(0.02766660425828302, 164.5905955236038)
+					c(0.1574657893973536, 503.7008642962317)
+					c(0.02766712964263789, 164.5902059084881)
+				$end 'r0'
+			$end 'Zwave'
+			$begin 'TerminalPMatrix'
+				m=4
+				n=4
+				$begin 'r0'
+					c(0.0006252325334314228, 1.999999906183304)
+					c(1.408808035891925e-010, 1.653492880809733e-013)
+					c(0, 0)
+					c(0, 0)
+				$end 'r0'
+				$begin 'r1'
+					c(2.968713166995419e-009, 1.118661979997579e-012)
+					c(0.0003361749506346138, 1.999999984623004)
+					c(0, 0)
+					c(0, 0)
+				$end 'r1'
+				$begin 'r2'
+					c(0, 0)
+					c(0, 0)
+					c(0.0006252323127867306, 1.999999906183381)
+					c(1.087210638658965e-009, -1.260054411614541e-013)
+				$end 'r2'
+				$begin 'r3'
+					c(0, 0)
+					c(0, 0)
+					c(-4.188169750622482e-009, 3.013630726802835e-012)
+					c(0.0003361821297886109, 1.999999984619463)
+				$end 'r3'
+			$end 'TerminalPMatrix'
+		$end 'DataPoint'
+	$end 'Frequencies'
+	$begin 'Ports'
+		Port(ModalEntryName='1', TerminalEntryName='1', PortName='1', Mode=1, ModeName='', TerminalName='', ParameterName='', MatrixIndex=0)
+		Port(ModalEntryName='1', TerminalEntryName='1', PortName='1', Mode=2, ModeName='', TerminalName='', ParameterName='', MatrixIndex=1)
+		Port(ModalEntryName='2', TerminalEntryName='2', PortName='2', Mode=1, ModeName='', TerminalName='', ParameterName='', MatrixIndex=2)
+		Port(ModalEntryName='2', TerminalEntryName='2', PortName='2', Mode=2, ModeName='', TerminalName='', ParameterName='', MatrixIndex=3)
+	$end 'Ports'
+	$begin 'OtherStateSpaceModels'
+	$end 'OtherStateSpaceModels'
+	HigherOrderMode=false
+	PortNames('1', '2')
+	PortModes(2, 2)
+	ModalData=true
+	LastSolvedFreq=0
+	IeEnergyError=0
+	PreferredImpedance='Zpi'
+$end 'soln'

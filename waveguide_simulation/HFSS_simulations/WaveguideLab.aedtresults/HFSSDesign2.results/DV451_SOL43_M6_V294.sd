@@ -1,0 +1,81 @@
+$begin 'soln'
+	ObjectType='HfssModal'
+	SolutionType='Adaptive'
+	MajorVersion=2
+	MinorVersion=0
+	Producer=''
+	Name='Adaptive_6'
+	AdaptivePass=6
+	EnergyError=5210746.626214531
+	$begin 'Frequencies'
+		$begin 'DataPoint'
+			Frequency=7999999999.999999
+			DataType='None'
+			$begin 'SMatrix'
+				m=2
+				n=2
+				$begin 'r0'
+					c(-0.4852731515215618, -0.8724805232788048)
+					c(-0.001230257902928642, 0.0006916033188143694)
+				$end 'r0'
+				$begin 'r1'
+					c(-0.001230257902928646, 0.0006916033188143717)
+					c(-0.4909203457528516, -0.8693074083451322)
+				$end 'r1'
+			$end 'SMatrix'
+			$begin 'Gamma'
+				n=2
+				$begin 'r0'
+					c(0.007780999125664519, 148.1994980299345)
+					c(0.007780965046531823, 148.1995416826575)
+				$end 'r0'
+			$end 'Gamma'
+			$begin 'Zpi'
+				n=2
+				$begin 'r0'
+					c(131.4417952143322, 0.004175709917274775)
+					c(131.4558566653589, 0.00416886779768826)
+				$end 'r0'
+			$end 'Zpi'
+			$begin 'Zpv'
+				n=2
+				$begin 'r0'
+					c(213.1221971677017, -0.0006192100153892522)
+					c(213.1215185094001, -0.0006199723573501604)
+				$end 'r0'
+			$end 'Zpv'
+			$begin 'Zwave'
+				n=2
+				$begin 'r0'
+					c(426.2508404136145, -0.009113509467972502)
+					c(426.2507146709248, -0.009113422408071094)
+				$end 'r0'
+			$end 'Zwave'
+			$begin 'TerminalPMatrix'
+				m=2
+				n=2
+				$begin 'r0'
+					c(2.000000001244792, -4.276012790354432e-005)
+					c(0, 0)
+				$end 'r0'
+				$begin 'r1'
+					c(0, 0)
+					c(2.000000001245199, -4.275973213519079e-005)
+				$end 'r1'
+			$end 'TerminalPMatrix'
+		$end 'DataPoint'
+	$end 'Frequencies'
+	$begin 'Ports'
+		Port(ModalEntryName='1', TerminalEntryName='1', PortName='1', Mode=1, ModeName='', TerminalName='', ParameterName='', MatrixIndex=0)
+		Port(ModalEntryName='2', TerminalEntryName='2', PortName='2', Mode=1, ModeName='', TerminalName='', ParameterName='', MatrixIndex=1)
+	$end 'Ports'
+	$begin 'OtherStateSpaceModels'
+	$end 'OtherStateSpaceModels'
+	HigherOrderMode=false
+	PortNames('1', '2')
+	PortModes(1, 1)
+	ModalData=true
+	LastSolvedFreq=0
+	IeEnergyError=0
+	PreferredImpedance='Zpi'
+$end 'soln'

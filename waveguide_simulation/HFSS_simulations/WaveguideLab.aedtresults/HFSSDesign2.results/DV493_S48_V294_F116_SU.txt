@@ -1,0 +1,12 @@
+    VersionID HFSS2016
+    Success 1
+    SolverName Nondomain
+    IterativeSolver 0
+    DistributedSolver 0
+    Precision 1
+    NumTasks 1
+    NumTets 5433
+    BasisOrder 1
+    TREECOTREE 0
+    MemoryMasterMB 60.000000
+    MemoryTotalMB 137.703125
